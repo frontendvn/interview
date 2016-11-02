@@ -22,13 +22,13 @@ get_header(); ?>
       <div class="col-md-7 col-md-pull-5">
         <div class="infor-about">
           <h1>About Me</h1>
-          <ul class="infor">
-            <li> You probably introduced yourself in your first Tumblr entry, but if you post regularly, the information is soon buried out of sight of your existing and potential customers. </li>
-            <li>While most of Tumblr's themes don't come with extra pages, such as an About Me page, you can edit your blog's theme to include one.</li>
-            <li> Adding a new page to your Tumblr blog is only slightly more complicated than adding a new post.</li>
-            <li>Email: rainchecklive@abc.com</li>
-            <li>Phone: 08xx-000-000000</li>
-          </ul>
+          <?php 
+          $page_slug ='about';
+            $page_data = get_page_by_path($page_slug);
+
+            echo apply_filters('the_content', $page_data->post_content);
+          ?>
+          
         </div>
       </div>
     </div>

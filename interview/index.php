@@ -25,8 +25,11 @@ $latest_video = $items[0];
 unset($items[0]);
 ?> 
 <section class="video-section">
-  <div class="container">
-      <iframe width="560" height="500" src="https://www.youtube.com/embed/<?php echo $latest_video->id->videoId;?>" frameborder="0" allowfullscreen></iframe>
+  <div class="container"><div class="video">
+      <iframe width="1170" height="658" src="https://www.youtube.com/embed/<?php echo $latest_video->id->videoId;?>" frameborder="0" allowfullscreen></iframe>
+<div class="bg">
+            <h2 class="title"><?php echo $latest_video->snippet->title;?></h2>
+          </div></div>
   </div>
 </section>
 <div class="interviews-section">
